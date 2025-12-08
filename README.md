@@ -32,7 +32,21 @@ No engine changes, no GPU, just pure CPU-powered chaos that makes everything loo
 
 ![image](https://github.com/user-attachments/assets/3ac68114-d398-4fa1-8858-25e3bf954c7a)
 
-![image](https://github.com/user-attachments/assets/40feb739-8e95-4374-adcf-38e03d409bf9)
+- 256³ spectral turbulence  
+- 9 frames of real, unforced, incompressible Navier-Stokes  
+- Fully developed → natural decay  
+- Ran on my iPhone. No GPU. No forcing. 
+- 42 lines of code.  
+
+<img width="890" height="932" alt="image" src="https://github.com/user-attachments/assets/6eed96fb-4438-4961-8cfa-2f52448631d6" />
+<img width="890" height="932" alt="image" src="https://github.com/user-attachments/assets/032cd716-98b9-49ea-86c6-b575b67c76aa" />
+<img width="890" height="932" alt="image" src="https://github.com/user-attachments/assets/6d38c3e3-e07c-4947-a2fa-a9354b9a5328" />
+<img width="890" height="932" alt="image" src="https://github.com/user-attachments/assets/ff4c188a-47ea-4d83-8aab-6892fb67f643" />
+<img width="890" height="932" alt="image" src="https://github.com/user-attachments/assets/5a320d21-a8b1-41c6-a025-4b5042d3a738" />
+<img width="890" height="932" alt="image" src="https://github.com/user-attachments/assets/4f32757c-6df4-4783-9083-577e612b76db" />
+<img width="890" height="932" alt="image" src="https://github.com/user-attachments/assets/f236b37f-58a2-4392-954c-da86ee4fcb57" />
+<img width="890" height="932" alt="image" src="https://github.com/user-attachments/assets/bba89eda-f281-4279-8155-5b71619f8c03" />
+
 
 ![image](https://github.com/user-attachments/assets/45e90451-073b-4ee4-b272-58c8c8873583)
 
