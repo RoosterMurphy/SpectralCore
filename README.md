@@ -84,5 +84,3 @@ If you would like to contribute Or buy me a coffee:
 
 [![Buy Me a Coffee](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://paypal.me/rhouse84)
 
-## License
-MIT — Do your worst.
