@@ -36,9 +36,25 @@ This is a universal spectral math juggler. Because the physics hook lives entire
 
 ## Quick Start
 
-bash pip install torch 
+pip install torch
 
-python import torch from SpectralCore import init, step, laplacian, diffuse  # One-time setup init(grid=256)          # or 128, 320, 512, 1024, 4096...  # Your physics hook (example: Navier-Stokes turbulence) def ns_physics(hats):     uhat, vhat, what = hats[0], hats[1], hats[2]   # velocity components     # ... add nonlinear terms, pressure projection, forcing here (see examples/)     return [laplacian([uhat])[0] * 0.001, ...]     # viscosity example  # Run fields = [torch.randn(256,256,256) for _ in range(3)]   # u,v,w for t in range(1000):     fields = step(fields, dt=0.005, physics=ns_physics)     # fields[0] is now updated velocity — drop straight into your 3D texture 
+import torch
+from SpectralCore import init, step, laplacian, diffuse
+
+# One-time setup
+init(grid=256)          # or 128, 320, 512, 1024, 4096...
+
+# Your physics hook (example: Navier-Stokes turbulence)
+def ns_physics(hats):
+    uhat, vhat, what = hats[0], hats[1], hats[2]   # velocity components
+    # ... add nonlinear terms, pressure projection, forcing here (see examples/)
+    return [laplacian([uhat])[0] * 0.001, ...]     # viscosity example
+
+# Run
+fields = [torch.randn(256,256,256) for _ in range(3)]   # u,v,w
+for t in range(1000):
+    fields = step(fields, dt=0.005, physics=ns_physics)
+    # fields[0] is now updated velocity — drop straight into your 3D texture
 
 Built-in one-line helpers (after init()):
 - laplacian(hats) → returns -K2 * hats
