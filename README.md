@@ -66,7 +66,7 @@ It is not a full simulation framework — it’s a compact core for building one
 
 ## Quick Start
 
-python
+```python
 import torch
 from SpectralCore import init, step, laplacian
 
@@ -83,6 +83,8 @@ field = torch.randn(256,256,256)
 # Time evolution
 for _ in range(1000):
     field = step(field, dt=0.005, physics=physics)
+
+
 ---
 License
 
