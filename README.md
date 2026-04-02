@@ -53,24 +53,7 @@ Performance & Scaling
 
 Tested across a range of grid sizes, from small CPU runs to large 3D grids (e.g., 4096³ on appropriate hardware).
 
-Quick start
 
-import torch
-from SpectralCore import init, step, laplacian
-
-Initialize grid
-init(grid=256)
-
-Example physics: simple diffusion
-def physics(hats):
-    return laplacian(hats)
-
-Create field
-field = torch.randn(256,256,256)
-
-Time evolution
-for _ in range(1000):
-    field = step(field, dt=0.005, physics=physics)
 
 Why SpectralCore?
 
@@ -81,7 +64,25 @@ SpectralCore focuses on:
 
 It is not a full simulation framework — it’s a compact core for building one.
 
-⸻
+## Quick Start
+
+```python
+import torch
+from SpectralCore import init, step, laplacian
+
+# Initialize grid
+init(grid=256)
+
+# Example physics: simple diffusion
+def physics(hats):
+    return laplacian(hats)
+
+# Create field
+field = torch.randn(256,256,256)
+
+# Time evolution
+for _ in range(1000):
+    field = step(field, dt=0.005, physics=physics)
 
 License
 
@@ -92,7 +93,7 @@ MIT — do whatever you want.
 Made by Rooster Murphy.
 Contributions welcome.
 
-If you would like to contribute Or buy me a coffee:
+If you find this useful, consider supporting the project:
 
 [![Buy Me a Coffee](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://paypal.me/rhouse84)
 
