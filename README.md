@@ -85,7 +85,6 @@ for _ in range(1000):
     field = step(field, dt=0.005, physics=physics)
 
 
----
 License
 
 MIT — do whatever you want.
